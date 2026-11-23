@@ -46,7 +46,7 @@ function footer() {
   </div>
   <div class="footer__legal">
     <p>&copy; ${new Date().getFullYear()} ${esc(site.name)}</p>
-    <ul>${legal}<li><button type="button" data-consent-open>Cookie settings</button></li></ul>
+    <ul>${legal}<li><button type="button" data-consent-open>Cookie settings</button></li><li class="footer__credit">Built by <a href="https://srcs.online" target="_blank" rel="noopener">Sync Race</a></li></ul>
   </div>
 </footer>`;
 }

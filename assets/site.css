@@ -409,3 +409,5 @@ body:not(.has-hero) { padding-top: var(--header-h); }
 @media (max-width: 960px) { .article-figure { position: static; flex-direction: row; gap: 1.25rem; } .article-figure img { height: 120px; margin: 0; } }
 .related--two { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 860px) { .related--two { grid-template-columns: 1fr; } }
+.footer__credit { opacity: .75; }
+.footer__credit a { text-decoration: underline; text-underline-offset: .2em; }
