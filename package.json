@@ -1,0 +1,8 @@
+{
+  "name": "topophilia-design",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "chrome": "node tools/chrome.mjs"
+  }
+}
