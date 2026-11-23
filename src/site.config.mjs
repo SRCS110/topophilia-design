@@ -3,7 +3,7 @@
 export const site = {
   name: "Topophilia Design Studio",
   domain: "https://www.topophiliadesign.com",
-  serviceArea: "Interior and wardrobe design in Sonoma County and the greater Bay Area.",
+  serviceArea: "Interior and wardrobe design studio in Santa Rosa, serving Sonoma County and the greater Bay Area.",
   navLeft: [
     { label: "Interiors", href: "/interiors" },
     { label: "Wardrobe", href: "/wardrobe" },
