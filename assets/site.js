@@ -91,6 +91,25 @@
     else if (GTM_ID) { showBanner(); }
   }
 
+  /* FAQ: open every answer while editing, and keep FAQPage schema in step with edited questions */
+  const faq = document.querySelector(".faq");
+  if (faq) {
+    if (/[?&]edit\b/.test(location.search)) faq.querySelectorAll("details").forEach((d) => (d.open = true));
+    const ld = document.getElementById("page-schema");
+    if (ld) {
+      try {
+        const data = JSON.parse(ld.textContent);
+        const node = data["@graph"].find((n) => n["@type"] === "FAQPage");
+        node.mainEntity = [...faq.querySelectorAll(".faq__item")].map((it) => ({
+          "@type": "Question",
+          name: it.querySelector(".faq__q").textContent.trim(),
+          acceptedAnswer: { "@type": "Answer", text: it.querySelector(".faq__a").textContent.trim().replace(/\s+/g, " ") }
+        })).filter((q) => q.name && q.acceptedAnswer.text);
+        ld.textContent = JSON.stringify(data);
+      } catch {}
+    }
+  }
+
   /* Client intake form */
   const form = document.getElementById("intake-form");
   if (form) {
