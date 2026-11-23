@@ -411,3 +411,10 @@ body:not(.has-hero) { padding-top: var(--header-h); }
 @media (max-width: 860px) { .related--two { grid-template-columns: 1fr; } }
 .footer__credit { opacity: .75; }
 .footer__credit a { text-decoration: underline; text-underline-offset: .2em; }
+
+/* Mobile menu: drop the header's backdrop blur while open (it trapped the fixed menu inside the header) and layer the menu above the page */
+@media (max-width: 1080px) {
+  body[data-nav-open="true"] .wordmark { text-shadow: none; }
+  body[data-nav-open="true"] .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--page); z-index: 80; }
+  .nav { z-index: 81; height: calc(100dvh - var(--header-h)); }
+}
