@@ -1,22 +1,17 @@
 # Content to supply: Topophilia Design
 
-Placeholders on the site (lorem ipsum, [SECTION TITLE TBD], [PROJECT TITLE TBD], [IMAGE TO SUPPLY], [CLIENT TO SUPPLY]). Most can be replaced by the client in the editor at https://www.topophiliadesign.com/?edit.
+Most text and images can be replaced by the client in the editor at https://www.topophiliadesign.com/?edit.
 
-## Home
-- Hero video (slot marked [HERO VIDEO TO SUPPLY]); Daniel to produce
-- Interior design: photo + body paragraph
-- Wardrobe design: photo + body paragraph
-- Portfolio preview: 3 photos, titles, notes; intro line
+## Copy for client review
+All page copy was written from the brief (interior and wardrobe design, sourcing furniture, clothing and accessories abroad and at home, Sonoma County and the Bay Area, the Collector / Tailor / Builder approach, the meaning of topophilia). Ask the client to read and approve it, especially the Interiors, Wardrobe and figure pages.
 
-## The Collector / The Tailor / The Builder
-- Two sections each: titles + body copy, "what's included" list
+## Imagery
+- The hero, dining room, wardrobe, still life and joinery images are AI-generated mood images (Runway). Replace with the client's own photography when available.
+- Hero video (planned by Daniel) replaces the hero image on the home page.
+- Portfolio: real project photography, titles and notes; add a gallery to /portfolio when supplied. Portfolio meta description is blank on purpose until then.
 
 ## About
-- Founder / studio story section (title + body)
-
-## Portfolio
-- Meta description (left blank on purpose)
-- Intro line, 6 projects (photo, title, note)
+- Founder or studio story and portrait, if the client wants one.
 
 ## Contact details (not shown anywhere yet)
 - Business email, phone, address (if any), social links
@@ -29,4 +24,4 @@ Placeholders on the site (lorem ipsum, [SECTION TITLE TBD], [PROJECT TITLE TBD],
 ## Setup
 - GA4 measurement ID (assets/site.js GA_ID) if analytics are wanted
 - AI crawler policy for robots.txt (currently allows all)
-- Vercel env: RESEND_API_KEY, INTAKE_TO (client inbox), INTAKE_FROM (verified sender on topophiliadesign.com)
+- Vercel env: RESEND_API_KEY, INTAKE_TO (client inbox), INTAKE_FROM (verified sender)

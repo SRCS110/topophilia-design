@@ -4,30 +4,33 @@ export const site = {
   name: "Topophilia Design",
   domain: "https://www.topophiliadesign.com",
   serviceArea: "Interior and wardrobe design in Sonoma County and the greater Bay Area.",
-  nav: [
-    { label: "The Collector", href: "/the-collector" },
-    { label: "The Tailor", href: "/the-tailor" },
-    { label: "The Builder", href: "/the-builder" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "About", href: "/about" }
+  navLeft: [
+    { label: "Interiors", href: "/interiors" },
+    { label: "Wardrobe", href: "/wardrobe" },
+    { label: "Sourcing", href: "/the-collector" }
   ],
-  cta: { label: "Start a project", href: "/contact" },
+  navRight: [
+    { label: "Studio", href: "/about" }
+  ],
+  cta: { label: "Enquire", href: "/contact" },
   footer: {
     columns: [
       {
         title: "Services",
         links: [
+          { label: "Interior design", href: "/interiors" },
+          { label: "Wardrobe design", href: "/wardrobe" },
           { label: "The Collector: sourcing", href: "/the-collector" },
-          { label: "The Tailor: fit and function", href: "/the-tailor" },
+          { label: "The Tailor: fit", href: "/the-tailor" },
           { label: "The Builder: the plan", href: "/the-builder" }
         ]
       },
       {
         title: "Studio",
         links: [
-          { label: "Portfolio", href: "/portfolio" },
           { label: "About", href: "/about" },
-          { label: "Client intake", href: "/contact" }
+          { label: "Portfolio", href: "/portfolio" },
+          { label: "Enquire", href: "/contact" }
         ]
       }
     ],
@@ -41,6 +44,8 @@ export const site = {
   // Pages included in sitemap.xml (path, file)
   pages: [
     ["/", "index.html"],
+    ["/interiors", "interiors.html"],
+    ["/wardrobe", "wardrobe.html"],
     ["/the-collector", "the-collector.html"],
     ["/the-tailor", "the-tailor.html"],
     ["/the-builder", "the-builder.html"],

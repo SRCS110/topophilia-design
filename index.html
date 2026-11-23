@@ -20,9 +20,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/mulish.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" imagesrcset="/assets/img/hero-960.webp 960w, /assets/img/hero-1600.webp 1600w, /assets/img/hero-1920.webp 1920w" imagesizes="100vw">
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://www.topophiliadesign.com/#business","name":"Topophilia Design","url":"https://www.topophiliadesign.com/","logo":"https://www.topophiliadesign.com/icon-512.png","image":"https://www.topophiliadesign.com/assets/img/og.jpg","description":"Interior design and wardrobe design services in Sonoma County and the greater Bay Area, sourcing one-of-a-kind furniture, clothing and accessories from abroad and at home.","areaServed":[{"@type":"AdministrativeArea","name":"Sonoma County, California"},{"@type":"Place","name":"San Francisco Bay Area, California"}],"knowsAbout":["Interior design","Wardrobe design","Furniture sourcing"]},{"@type":"WebSite","@id":"https://www.topophiliadesign.com/#website","name":"Topophilia Design","url":"https://www.topophiliadesign.com/","publisher":{"@id":"https://www.topophiliadesign.com/#business"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://www.topophiliadesign.com/#business","name":"Topophilia Design","url":"https://www.topophiliadesign.com/","logo":"https://www.topophiliadesign.com/icon-512.png","image":"https://www.topophiliadesign.com/assets/img/og.jpg","description":"Interior design and wardrobe design in Sonoma County and the greater Bay Area, sourcing one-of-a-kind furniture, clothing and accessories from abroad and at home.","areaServed":[{"@type":"AdministrativeArea","name":"Sonoma County, California"},{"@type":"Place","name":"San Francisco Bay Area, California"}],"knowsAbout":["Interior design","Wardrobe design","Furniture sourcing"]},{"@type":"WebSite","@id":"https://www.topophiliadesign.com/#website","name":"Topophilia Design","url":"https://www.topophiliadesign.com/","publisher":{"@id":"https://www.topophiliadesign.com/#business"}}]}</script>
 </head>
 <body>
 <!--chrome:header-->
@@ -34,150 +35,125 @@
       <span class="wordmark" aria-hidden="true"><span class="wordmark__name">Topophilia</span><span class="wordmark__sub">Design</span></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Menu</span><svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
-    <nav class="nav" id="primary-nav" aria-label="Primary"><a href="/the-collector">The Collector</a><a href="/the-tailor">The Tailor</a><a href="/the-builder">The Builder</a><a href="/portfolio">Portfolio</a><a href="/about">About</a><a class="nav__cta" href="/contact">Start a project</a></nav>
+    <nav class="nav" id="primary-nav" aria-label="Primary"><div class="nav__group nav__group--left"><a href="/interiors">Interiors</a><a href="/wardrobe">Wardrobe</a><a href="/the-collector">Sourcing</a></div><div class="nav__group nav__group--right"><a href="/about">Studio</a><a class="nav__cta" href="/contact">Enquire</a></div></nav>
   </div>
 </header>
 <!--/chrome:header-->
 <main id="main">
-<section class="hero hero--full">
-  <div class="hero__media" aria-hidden="true"><span>[HERO VIDEO TO SUPPLY]</span></div>
+<section class="hero">
+  <div class="hero__media"><img data-cms="hero-image" data-cms-type="image" src="/assets/img/hero-1600.webp" srcset="/assets/img/hero-960.webp 960w, /assets/img/hero-1600.webp 1600w, /assets/img/hero-1920.webp 1920w" sizes="100vw" alt="A calm living room with a carved walnut coffee table, a leather lounge chair and a cream sofa, tall windows open onto vineyard hills" width="1600" height="893" fetchpriority="high"></div>
   <div class="hero__copy">
-    <p class="eyebrow">Interiors &middot; Wardrobe &middot; Sourcing</p>
-    <h1 data-cms="hero-title" data-cms-max="70">A love of place, carried home.</h1>
-    <p class="lead" data-cms="hero-lead" data-cms-max="220">Interior and wardrobe design in Sonoma County and the greater Bay Area, with one-of-a-kind furniture, clothing and accessories sourced from abroad and at home.</p>
+    <p class="eyebrow">Interior &amp; wardrobe design &middot; Sonoma County &amp; the Bay Area</p>
+    <h1 data-cms="hero-title" data-cms-max="60">A love of place, carried home.</h1>
     <div class="hero__actions">
-      <a class="btn" href="/contact">Start a project <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="btn btn--ghost" href="#how-we-work">How we work</a>
+      <a class="btn btn--light" href="/contact">Begin a commission</a>
+      <a class="link" href="#intro">Discover the studio <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<section class="section relay" id="how-we-work">
-  <div class="opener">
-    <p class="eyebrow">How we work</p>
-    <h2 data-cms="services-title" data-cms-max="70">Three hands, one balanced home</h2>
-    <p class="lead" data-cms="services-lead" data-cms-max="240">Every project is held in balance by three parts of the studio: finding the right pieces, making them work with what you already have, and tying it all together in one cohesive plan.</p>
+<section class="section" id="intro">
+  <div class="statement" data-reveal>
+    <img class="statement__mark" src="/assets/img/mark-120.webp" alt="" width="83" height="120">
+    <p class="statement__text" data-cms="intro-statement" data-cms-max="320">Topophilia is the Greek for a love of place. We design rooms and wardrobes around the pieces that make a place your own, finding one-of-a-kind furniture, clothing and accessories from abroad and close to home.</p>
+    <a class="link" href="/about">The studio <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+  </div>
+</section>
+
+<section class="section" id="interior-design" style="padding-top:0">
+  <div class="inner feature">
+    <div class="feature__media"><img data-cms="interiors-photo" data-cms-type="image" src="/assets/img/dining-1400.webp" srcset="/assets/img/dining-800.webp 800w, /assets/img/dining-1400.webp 1400w, /assets/img/dining-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 58vw" alt="A long walnut dining table with carved oak chairs and a linen runner beneath a textile wall hanging" width="1400" height="1045" loading="lazy" decoding="async"></div>
+    <div class="feature__text" data-reveal>
+      <p class="eyebrow"><span class="numeral">I.</span>Interiors</p>
+      <h2 data-cms="interiors-title" data-cms-max="60">Rooms with a sense of place</h2>
+      <p class="lead" data-cms="interiors-lead" data-cms-max="260">Furniture with history and character, chosen piece by piece and set with what you already own, so a room feels collected rather than bought.</p>
+      <a class="link" href="/interiors">Interior design <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--band" id="wardrobe">
+  <div class="inner feature feature--flip">
+    <div class="feature__media"><img data-cms="wardrobe-photo" data-cms-type="image" src="/assets/img/wardrobe-1400.webp" srcset="/assets/img/wardrobe-800.webp 800w, /assets/img/wardrobe-1400.webp 1400w, /assets/img/wardrobe-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 58vw" alt="A walk-in wardrobe in walnut and oak, with tailored garments in camel, cream and charcoal" width="1400" height="1045" loading="lazy" decoding="async"></div>
+    <div class="feature__text" data-reveal>
+      <p class="eyebrow"><span class="numeral">II.</span>Wardrobe</p>
+      <h2 data-cms="wardrobe-title" data-cms-max="60">A wardrobe, considered</h2>
+      <p class="lead" data-cms="wardrobe-lead" data-cms-max="260">Clothing and accessories found near and far, edited and fitted to the pieces you return to, and given a place of their own.</p>
+      <a class="link" href="/wardrobe">Wardrobe design <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section relay" id="approach">
+  <div class="head">
+    <p class="eyebrow">Our approach</p>
+    <h2 data-cms="approach-title" data-cms-max="60">Three hands, held in balance</h2>
+    <div class="rule"></div>
+    <p class="lead" data-cms="approach-lead" data-cms-max="260">Every commission passes between three parts of the studio, the way our carved figures pass a single iron bar.</p>
   </div>
   <div class="relay__inner">
     <div class="relay__row" data-relay="collector">
-    <div class="relay__stage" style="--bw:242;--bh:888;--bx:0.2355;--by:0.0518">
-      <img class="baton" src="/assets/img/baton-702.webp" srcset="/assets/img/baton-351.webp 351w, /assets/img/baton-702.webp 702w" sizes="280px" alt="" width="281" height="65" aria-hidden="true"><img class="relay__body" src="/assets/img/collector-body-888.webp" srcset="/assets/img/collector-body-444.webp 121w, /assets/img/collector-body-888.webp 242w" sizes="97px" alt="The Collector, a tall carved wooden figure with crossed legs" width="97" height="355" loading="lazy" decoding="async">
+      <div class="relay__stage" style="--bw:242;--bh:888;--bx:0.2355;--by:0.0518">
+        <img class="baton" src="/assets/img/baton-351.webp" srcset="/assets/img/baton-351.webp 351w, /assets/img/baton-702.webp 702w" sizes="183px" alt="" width="183" height="42" aria-hidden="true"><img class="relay__body" src="/assets/img/collector-body-444.webp" srcset="/assets/img/collector-body-444.webp 121w, /assets/img/collector-body-888.webp 242w" sizes="63px" alt="The Collector, a tall carved wooden figure with crossed legs" width="63" height="231" loading="lazy" decoding="async">
+      </div>
+      <div class="relay__text">
+        <p class="eyebrow">Sourcing</p>
+        <h3 class="relay__name">The Collector</h3>
+        <p data-cms="collector-summary" data-cms-max="200">Sourcing and finding unique pieces for your space, from abroad and at home.</p>
+        <a class="link" href="/the-collector">The Collector <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
     </div>
-    <div class="relay__text">
-      <p class="eyebrow">Sourcing</p>
-      <h3 class="relay__name">The Collector</h3>
-      <p class="lead" data-cms="collector-summary" data-cms-max="200">Sourcing and finding unique items for your space, from abroad and at home.</p>
-      <a class="trio__link" href="/the-collector">Meet the Collector <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-    </div>
-  </div>
     <div class="relay__row" data-relay="tailor">
-    <div class="relay__stage" style="--bw:211;--bh:723;--bx:0.4332;--by:0.0633">
-      <img class="relay__body" src="/assets/img/tailor-body-723.webp" srcset="/assets/img/tailor-body-361.webp 105w, /assets/img/tailor-body-723.webp 211w" sizes="84px" alt="The Tailor, an hourglass-shaped carved wooden figure" width="84" height="289" loading="lazy" decoding="async">
+      <div class="relay__stage" style="--bw:211;--bh:723;--bx:0.4332;--by:0.0633">
+        <img class="relay__body" src="/assets/img/tailor-body-361.webp" srcset="/assets/img/tailor-body-361.webp 105w, /assets/img/tailor-body-723.webp 211w" sizes="55px" alt="The Tailor, an hourglass-shaped carved wooden figure" width="55" height="188" loading="lazy" decoding="async">
+      </div>
+      <div class="relay__text">
+        <p class="eyebrow">Fit</p>
+        <h3 class="relay__name">The Tailor</h3>
+        <p data-cms="tailor-summary" data-cms-max="200">Making each piece work with what you already have, in your rooms and in your wardrobe.</p>
+        <a class="link" href="/the-tailor">The Tailor <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
     </div>
-    <div class="relay__text">
-      <p class="eyebrow">Fit and function</p>
-      <h3 class="relay__name">The Tailor</h3>
-      <p class="lead" data-cms="tailor-summary" data-cms-max="200">Making each piece work with what you already have, in your rooms and in your wardrobe.</p>
-      <a class="trio__link" href="/the-tailor">Meet the Tailor <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-    </div>
-  </div>
     <div class="relay__row" data-relay="builder">
-    <div class="relay__stage" style="--bw:298;--bh:597;--bx:0.2598;--by:0.0754">
-      <img class="relay__body" src="/assets/img/builder-body-597.webp" srcset="/assets/img/builder-body-298.webp 149w, /assets/img/builder-body-597.webp 298w" sizes="119px" alt="The Builder, a carved wooden figure with zigzag, rafter-like legs" width="119" height="239" loading="lazy" decoding="async">
-    </div>
-    <div class="relay__text">
-      <p class="eyebrow">The plan</p>
-      <h3 class="relay__name">The Builder</h3>
-      <p class="lead" data-cms="builder-summary" data-cms-max="200">Building a cohesive plan that brings every room, piece and season together.</p>
-      <a class="trio__link" href="/the-builder">Meet the Builder <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-    </div>
-  </div>
-  </div>
-</section>
-
-<section class="section discipline" id="interior-design">
-  <div class="inner row">
-    <div class="discipline__media"><img data-cms="interiors-photo" data-cms-type="image" src="/assets/img/placeholder.svg" alt="[IMAGE TO SUPPLY]" width="1200" height="900" loading="lazy" decoding="async"></div>
-    <div>
-      <p class="eyebrow">Interior design</p>
-      <h2 data-cms="interiors-title" data-cms-max="70">Interior design</h2>
-      <p class="lead" data-cms="interiors-lead" data-cms-max="240">Rooms furnished with high-quality, one-of-a-kind pieces sourced from abroad and at home, made to work with what you already have.</p>
-      <div data-cms="interiors-body" data-cms-type="rich"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-      <a class="btn btn--ghost" href="/contact">Start an interiors project</a>
+      <div class="relay__stage" style="--bw:298;--bh:597;--bx:0.2598;--by:0.0754">
+        <img class="relay__body" src="/assets/img/builder-body-298.webp" srcset="/assets/img/builder-body-298.webp 149w, /assets/img/builder-body-597.webp 298w" sizes="77px" alt="The Builder, a carved wooden figure with zigzag, rafter-like legs" width="77" height="155" loading="lazy" decoding="async">
+      </div>
+      <div class="relay__text">
+        <p class="eyebrow">The plan</p>
+        <h3 class="relay__name">The Builder</h3>
+        <p data-cms="builder-summary" data-cms-max="200">Building a cohesive plan that holds every room, piece and season together.</p>
+        <a class="link" href="/the-builder">The Builder <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section--band discipline" id="wardrobe">
-  <div class="inner row row--flip">
-    <div class="discipline__media"><img data-cms="wardrobe-photo" data-cms-type="image" src="/assets/img/placeholder.svg" alt="[IMAGE TO SUPPLY]" width="1200" height="900" loading="lazy" decoding="async"></div>
-    <div>
-      <p class="eyebrow">Wardrobe design</p>
-      <h2 data-cms="wardrobe-title" data-cms-max="70">Wardrobe design</h2>
-      <p class="lead" data-cms="wardrobe-lead" data-cms-max="240">One-of-a-kind clothing and accessories sourced from abroad and at home, tailored to work with the wardrobe you already have.</p>
-      <div data-cms="wardrobe-body" data-cms-type="rich"><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-      <a class="btn btn--ghost" href="/contact">Start a wardrobe project</a>
+<section class="section section--band">
+  <div class="inner split">
+    <div class="split__media"><img data-cms="sourcing-photo" data-cms-type="image" src="/assets/img/finds-1000.webp" srcset="/assets/img/finds-600.webp 600w, /assets/img/finds-1000.webp 1000w, /assets/img/finds-1400.webp 1400w" sizes="(max-width: 960px) 90vw, 30vw" alt="Collected finds on an antique walnut console: a carved bowl, a brass candlestick and a small wooden horse" width="1000" height="1339" loading="lazy" decoding="async"></div>
+    <div class="split__text" data-reveal>
+      <p class="eyebrow"><span class="numeral">III.</span>Sourcing</p>
+      <h2 data-cms="sourcing-title" data-cms-max="60">Found near and far</h2>
+      <p class="lead" data-cms="sourcing-lead" data-cms-max="280">High-quality, one-of-a-kind furniture, clothing and accessories, brought home from abroad and from closer by. Each find is chosen for the place it will live in.</p>
+      <a class="link" href="/the-collector">The Collector <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="inner row">
-    <div class="row__art">
-      <img src="/assets/img/mark-560.webp" alt="" width="320" height="461" loading="lazy" decoding="async">
-    </div>
-    <div>
-      <p class="eyebrow">Topophilia</p>
-      <h2 data-cms="story-title" data-cms-max="70">From the Greek for a love of place</h2>
-      <div data-cms="story-body" data-cms-type="rich"><p>Our carved wooden horse carries finds home from near and far. Two figures travel with it: one rides on its back and one stands beneath it, each holding a long iron bar in balance.</p><p>It is how we think about every home: a well-made room and a well-made wardrobe both depend on balance.</p></div>
-      <a class="btn btn--ghost" href="/about">About the studio</a>
-    </div>
+<section class="band-photo">
+  <img src="/assets/img/craft-2000.webp" srcset="/assets/img/craft-1200.webp 1200w, /assets/img/craft-2000.webp 2000w, /assets/img/craft-2800.webp 2800w" sizes="100vw" alt="" width="2000" height="848" loading="lazy" decoding="async">
+  <div class="band-photo__copy">
+    <div class="rule"></div>
+    <blockquote data-cms="statement" data-cms-max="160">A well-made room and a well-made wardrobe both depend on balance.</blockquote>
   </div>
 </section>
 
-<section class="section section--invert">
-  <div class="statement">
-    <div class="balance" aria-hidden="true"></div>
-    <blockquote data-cms="statement" data-cms-max="200">A well-made room and a well-made wardrobe both depend on balance.</blockquote>
-  </div>
-</section>
-
-<section class="section">
-  <div class="inner">
-    <div class="opener">
-      <p class="eyebrow">Portfolio</p>
-      <h2 data-cms="portfolio-teaser-title" data-cms-max="70">Recent rooms and wardrobes</h2>
-      <p class="lead" data-cms="portfolio-teaser-lead" data-cms-max="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliq</p>
-    </div>
-    <ul class="gallery" data-cms="home-portfolio" data-cms-type="list" data-cms-label="home portfolio preview">
-      <li>
-        <img data-cms-field="photo" data-cms-type="image" src="/assets/img/placeholder.svg" alt="[IMAGE TO SUPPLY]" width="1200" height="900" loading="lazy" decoding="async">
-        <h3 data-cms-field="title">[PROJECT TITLE TBD]</h3>
-        <p data-cms-field="note">Lorem ipsum dolor sit amet.</p>
-      </li>
-      <li>
-        <img data-cms-field="photo" data-cms-type="image" src="/assets/img/placeholder.svg" alt="[IMAGE TO SUPPLY]" width="1200" height="900" loading="lazy" decoding="async">
-        <h3 data-cms-field="title">[PROJECT TITLE TBD]</h3>
-        <p data-cms-field="note">Lorem ipsum dolor sit amet.</p>
-      </li>
-      <li>
-        <img data-cms-field="photo" data-cms-type="image" src="/assets/img/placeholder.svg" alt="[IMAGE TO SUPPLY]" width="1200" height="900" loading="lazy" decoding="async">
-        <h3 data-cms-field="title">[PROJECT TITLE TBD]</h3>
-        <p data-cms-field="note">Lorem ipsum dolor sit amet.</p>
-      </li>
-    </ul>
-    <p class="center" style="margin-top:2.5rem"><a class="btn btn--ghost" href="/portfolio">View the portfolio</a></p>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="inner--text">
-    <div class="balance" aria-hidden="true"></div>
-    <p class="eyebrow">Client intake</p>
-    <h2 data-cms="home-cta-title" data-cms-max="70">Tell us about your space</h2>
-    <p class="lead" data-cms="home-cta-body" data-cms-max="200">Share a few details about your home, your wardrobe and what you are looking for, and the studio will be in touch.</p>
-    <a class="btn" href="/contact">Start a project <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-  </div>
+<section class="enquire">
+  <div class="rule"></div>
+  <p class="eyebrow">Enquire</p>
+  <h2 data-cms="home-enquire-title" data-cms-max="60">Begin a conversation</h2>
+  <p class="lead" data-cms="home-enquire-body" data-cms-max="240">Tell us about your home, your wardrobe and the pieces you love. Every commission starts with your place and what it means to you.</p>
+  <a class="btn" href="/contact">Start your enquiry <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </section>
 </main>
 <!--chrome:footer-->
@@ -187,7 +163,7 @@
       <span class="wordmark"><span class="wordmark__name">Topophilia</span><span class="wordmark__sub">Design</span></span>
       <p>Interior and wardrobe design in Sonoma County and the greater Bay Area.</p>
     </div>
-    <div class="footer__col"><h2>Services</h2><ul><li><a href="/the-collector">The Collector: sourcing</a></li><li><a href="/the-tailor">The Tailor: fit and function</a></li><li><a href="/the-builder">The Builder: the plan</a></li></ul></div><div class="footer__col"><h2>Studio</h2><ul><li><a href="/portfolio">Portfolio</a></li><li><a href="/about">About</a></li><li><a href="/contact">Client intake</a></li></ul></div>
+    <div class="footer__col"><h2>Services</h2><ul><li><a href="/interiors">Interior design</a></li><li><a href="/wardrobe">Wardrobe design</a></li><li><a href="/the-collector">The Collector: sourcing</a></li><li><a href="/the-tailor">The Tailor: fit</a></li><li><a href="/the-builder">The Builder: the plan</a></li></ul></div><div class="footer__col"><h2>Studio</h2><ul><li><a href="/about">About</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/contact">Enquire</a></li></ul></div>
   </div>
   <div class="footer__legal">
     <p>&copy; 2026 Topophilia Design</p>

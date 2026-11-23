@@ -14,9 +14,9 @@ const icon = {
 };
 
 function header(path) {
-  const links = site.nav
-    .map((l) => `<a href="${l.href}"${l.href === path ? ' aria-current="page"' : ""}>${esc(l.label)}</a>`)
-    .join("");
+  const link = (l) => `<a href="${l.href}"${l.href === path ? ' aria-current="page"' : ""}>${esc(l.label)}</a>`;
+  const left = site.navLeft.map(link).join("");
+  const right = site.navRight.map(link).join("") + `<a class="nav__cta" href="${site.cta.href}"${site.cta.href === path ? ' aria-current="page"' : ""}>${esc(site.cta.label)}</a>`;
   return `<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-header__bar">
@@ -25,7 +25,7 @@ function header(path) {
       <span class="wordmark" aria-hidden="true"><span class="wordmark__name">Topophilia</span><span class="wordmark__sub">Design</span></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Menu</span>${icon.menu}</button>
-    <nav class="nav" id="primary-nav" aria-label="Primary">${links}<a class="nav__cta" href="${site.cta.href}"${site.cta.href === path ? ' aria-current="page"' : ""}>${esc(site.cta.label)}</a></nav>
+    <nav class="nav" id="primary-nav" aria-label="Primary"><div class="nav__group nav__group--left">${left}</div><div class="nav__group nav__group--right">${right}</div></nav>
   </div>
 </header>`;
 }
