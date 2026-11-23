@@ -10,4 +10,5 @@
 ## Studio
 - [About](https://www.topophiliadesign.com/about)
 - [Portfolio](https://www.topophiliadesign.com/portfolio)
+- [Journal](https://www.topophiliadesign.com/journal)
 - [Client intake](https://www.topophiliadesign.com/contact): start a project

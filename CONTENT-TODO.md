@@ -10,6 +10,9 @@ All page copy was written from the brief (interior and wardrobe design, sourcing
 - Hero video (planned by Daniel) replaces the hero image on the home page.
 - Portfolio: real project photography, titles and notes; add a gallery to /portfolio when supplied. Portfolio meta description is blank on purpose until then.
 
+## Journal
+- First posts (title, date, cover image, body). Post template and index list to be added when the first story is ready.
+
 ## About
 - Founder or studio story and portrait, if the client wants one.
 

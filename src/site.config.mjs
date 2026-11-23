@@ -10,7 +10,8 @@ export const site = {
     { label: "Sourcing", href: "/the-collector" }
   ],
   navRight: [
-    { label: "Studio", href: "/about" }
+    { label: "Studio", href: "/about" },
+    { label: "Journal", href: "/journal" }
   ],
   cta: { label: "Enquire", href: "/contact" },
   footer: {
@@ -30,6 +31,7 @@ export const site = {
         links: [
           { label: "About", href: "/about" },
           { label: "Portfolio", href: "/portfolio" },
+          { label: "Journal", href: "/journal" },
           { label: "Enquire", href: "/contact" }
         ]
       }
@@ -51,6 +53,7 @@ export const site = {
     ["/the-builder", "the-builder.html"],
     ["/portfolio", "portfolio.html"],
     ["/about", "about.html"],
+    ["/journal", "journal.html"],
     ["/contact", "contact.html"],
     ["/privacy", "privacy.html"],
     ["/terms", "terms.html"],
