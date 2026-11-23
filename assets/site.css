@@ -332,3 +332,25 @@ h2.eyebrow { font-family: var(--font-body); font-weight: 600; letter-spacing: va
 .footer__mark:hover span { color: #fff; }
 .site-footer a.footer__mark:hover { text-decoration: none; }
 .footer__brand .wordmark { display: flex; }
+
+/* Clear header: transparent at the top, shaded once scrolled */
+.site-header { position: fixed; top: 0; left: 0; right: 0; background: transparent; border-bottom-color: transparent; transition: background .35s ease, border-color .35s ease, backdrop-filter .35s ease; }
+body:not(.has-hero) { padding-top: var(--header-h); }
+.site-header[data-scrolled="true"], body[data-nav-open="true"] .site-header { background: color-mix(in srgb, var(--page) 94%, transparent); border-bottom-color: var(--line); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.brand .logo--light { display: none; }
+.has-hero:not([data-nav-open="true"]) .site-header:not([data-scrolled="true"]) .logo--dark { display: none; }
+.has-hero:not([data-nav-open="true"]) .site-header:not([data-scrolled="true"]) .logo--light { display: block; }
+.has-hero:not([data-nav-open="true"]) .site-header:not([data-scrolled="true"]) .wordmark__name,
+.has-hero:not([data-nav-open="true"]) .site-header:not([data-scrolled="true"]) .wordmark__sub,
+.has-hero:not([data-nav-open="true"]) .site-header:not([data-scrolled="true"]) .nav-toggle { color: #fff; }
+@media (min-width: 1081px) {
+  .has-hero .site-header:not([data-scrolled="true"]) .nav a { color: #fff; }
+  .has-hero .site-header:not([data-scrolled="true"]) .nav .nav__cta { border-color: rgba(255,255,255,.8); }
+  .has-hero .site-header:not([data-scrolled="true"]) .nav .nav__cta:hover { background: #fff; color: var(--iron); }
+  .has-hero .site-header:not([data-scrolled="true"]) .nav a[aria-current="page"] { border-bottom-color: rgba(255,255,255,.8); }
+}
+.has-hero .site-header:not([data-scrolled="true"]) .wordmark { text-shadow: 0 1px 18px rgba(20,16,12,.25); }
+.hero { min-height: 100svh; }
+.page-hero { min-height: min(82svh, 860px); }
+.hero::after { background: linear-gradient(180deg, rgba(20,16,12,.38) 0%, rgba(20,16,12,0) 22%, rgba(20,16,12,.08) 55%, rgba(20,16,12,.64) 100%); }
+.page-hero::after { background: linear-gradient(180deg, rgba(20,16,12,.38) 0%, rgba(20,16,12,0) 26%, rgba(20,16,12,.08) 50%, rgba(20,16,12,.6) 100%); }

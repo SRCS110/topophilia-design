@@ -21,7 +21,7 @@ function header(path) {
 <header class="site-header">
   <div class="site-header__bar">
     <a class="brand" href="/">
-      <img src="/assets/img/tailor-icon-120.webp" srcset="/assets/img/tailor-icon-120.webp 1x, /assets/img/tailor-icon-240.webp 2x" alt="" width="61" height="58">
+      <img class="logo--dark" src="/assets/img/tailor-icon-120.webp" srcset="/assets/img/tailor-icon-120.webp 1x, /assets/img/tailor-icon-240.webp 2x" alt="" width="61" height="58"><img class="logo--light" src="/assets/img/tailor-icon-white-120.webp" srcset="/assets/img/tailor-icon-white-120.webp 1x, /assets/img/tailor-icon-white-240.webp 2x" alt="" width="61" height="58">
       <span class="wordmark"><span class="wordmark__name">Topophilia</span> <span class="wordmark__sub">Design Studio</span></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Menu</span>${icon.menu}</button>
