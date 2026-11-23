@@ -22,6 +22,6 @@ All page copy was written from the brief (interior and wardrobe design, sourcing
 - Accessibility: contact email, response time, audit date
 
 ## Setup
-- GTM container GTM-5SMKMWKN is live behind cookie consent; configure GA4 and other tags inside Tag Manager
+- GA4 measurement ID (assets/site.js GA_ID) if analytics are wanted
 - AI crawler policy for robots.txt (currently allows all)
 - Vercel env: RESEND_API_KEY, INTAKE_TO (client inbox), INTAKE_FROM (verified sender)

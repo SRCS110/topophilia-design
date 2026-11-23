@@ -11,4 +11,5 @@
 - [About](https://www.topophiliadesign.com/about)
 - [Portfolio](https://www.topophiliadesign.com/portfolio)
 - [Journal](https://www.topophiliadesign.com/journal)
+- [FAQ](https://www.topophiliadesign.com/faq): pricing (custom quote built around your budget), areas served, services
 - [Client intake](https://www.topophiliadesign.com/contact): start a project

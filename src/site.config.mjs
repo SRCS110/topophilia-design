@@ -32,6 +32,7 @@ export const site = {
           { label: "About", href: "/about" },
           { label: "Portfolio", href: "/portfolio" },
           { label: "Journal", href: "/journal" },
+          { label: "FAQ", href: "/faq" },
           { label: "Enquire", href: "/contact" }
         ]
       }
@@ -54,6 +55,7 @@ export const site = {
     ["/portfolio", "portfolio.html"],
     ["/about", "about.html"],
     ["/journal", "journal.html"],
+    ["/faq", "faq.html"],
     ["/contact", "contact.html"],
     ["/privacy", "privacy.html"],
     ["/terms", "terms.html"],
