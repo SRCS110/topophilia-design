@@ -13,11 +13,6 @@ All page copy was written from the brief (interior and wardrobe design, sourcing
 ## About
 - Founder or studio story and portrait, if the client wants one.
 
-## Local SEO
-- Studio street address (if the client is happy to publish it) would let us add a full LocalBusiness address and map coordinates in the schema; right now the schema uses service-area cities and a GeoCircle around Santa Rosa.
-- Confirm the list of towns served on the home page (Where we work).
-- Set up Google Business Profile with the same name, categories (Interior designer, Wardrobe consultant) and service area.
-
 ## Contact details (not shown anywhere yet)
 - Business email, phone, address (if any), social links
 
