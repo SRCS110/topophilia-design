@@ -353,3 +353,12 @@ p { margin: 0 0 1em; }
 .row--flip > :first-child { order: 2; }
 @media (max-width: 860px) { .row--flip > :first-child { order: 0; } .discipline .row { text-align: left; } }
 #wardrobe .discipline__media img { background: var(--page); }
+
+/* Full-width hero: media spans the viewport, copy centred over it */
+.hero--full { position: relative; padding: 0; min-height: min(86svh, 820px); display: grid; place-items: center; text-align: center; overflow: hidden; background: var(--base); }
+.hero--full .hero__media { position: absolute; inset: 0; aspect-ratio: auto; max-height: none; width: 100%; height: 100%; background: var(--base); display: flex; align-items: flex-end; justify-content: flex-end; padding: 1.25rem 1.5rem; }
+.hero--full .hero__media video, .hero--full .hero__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero--full .hero__copy { position: relative; z-index: 1; max-width: 760px; padding: clamp(4rem, 10vw, 8rem) var(--gutter); }
+.hero--full .lead { max-width: 620px; margin-inline: auto; }
+.hero--full .hero__actions { justify-content: center; }
+@media (max-width: 860px) { .hero--full { min-height: 72svh; } }
