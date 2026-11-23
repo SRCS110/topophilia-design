@@ -51,18 +51,10 @@
   const gpc = navigator.globalPrivacyControl === true;
   const read = () => { try { const v = JSON.parse(localStorage.getItem(CONSENT_KEY)); return v && v.version === CONSENT_VERSION ? v : null; } catch { return null; } };
   const save = (analytics) => { const v = { version: CONSENT_VERSION, analytics: !!analytics && !gpc, ts: new Date().toISOString() }; try { localStorage.setItem(CONSENT_KEY, JSON.stringify(v)); } catch {} return v; };
-  const loadAnalytics = () => {
-    if (!GTM_ID || window.__gtmLoaded) return;
-    window.__gtmLoaded = true;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { window.dataLayer.push(arguments); };
-    window.gtag("consent", "default", { analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
-    window.gtag("js", new Date());
-    window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
-    const s = document.createElement("script");
-    s.async = true; s.src = "https://www.googletagmanager.com/gtm.js?id=" + encodeURIComponent(GTM_ID);
-    document.head.appendChild(s);
-  };
+  // GTM is loaded in <head> with consent mode (analytics denied by default). These update the consent state.
+  const gtagSafe = function () { window.dataLayer = window.dataLayer || []; window.dataLayer.push(arguments); };
+  const loadAnalytics = () => { gtagSafe("consent", "update", { analytics_storage: "granted" }); };
+  const denyAnalytics = () => { gtagSafe("consent", "update", { analytics_storage: "denied" }); };
   const banner = document.getElementById("consent");
   let lastFocus = null;
   const showBanner = () => {
@@ -81,9 +73,9 @@
       if (!act) return;
       const a = act.getAttribute("data-consent");
       if (a === "accept") { save(true); loadAnalytics(); hideBanner(); }
-      else if (a === "reject") { save(false); hideBanner(); }
+      else if (a === "reject") { save(false); denyAnalytics(); hideBanner(); }
       else if (a === "prefs") { const p = banner.querySelector(".consent__prefs"); p.hidden = !p.hidden; act.setAttribute("aria-expanded", String(!p.hidden)); }
-      else if (a === "save") { const v = save(banner.querySelector("#consent-analytics").checked); if (v.analytics) loadAnalytics(); hideBanner(); }
+      else if (a === "save") { const v = save(banner.querySelector("#consent-analytics").checked); if (v.analytics) loadAnalytics(); else denyAnalytics(); hideBanner(); }
     });
     banner.addEventListener("keydown", (e) => {
       if (e.key !== "Tab") return;
@@ -94,7 +86,7 @@
     });
     document.querySelectorAll("[data-consent-open]").forEach((b) => b.addEventListener("click", showBanner));
     const cur = read();
-    if (cur) { if (cur.analytics && !gpc) loadAnalytics(); }
+    if (cur) { /* stored choice already applied in <head> */ }
     else if (gpc) { save(false); }
     else if (GTM_ID) { showBanner(); }
   }
