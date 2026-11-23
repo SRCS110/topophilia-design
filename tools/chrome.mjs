@@ -20,9 +20,9 @@ function header(path) {
   return `<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-header__bar">
-    <a class="brand" href="/" aria-label="${esc(site.name)}, home">
+    <a class="brand" href="/">
       <img src="/assets/img/mark-120.webp" alt="" width="83" height="120">
-      <span class="wordmark" aria-hidden="true"><span class="wordmark__name">Topophilia</span><span class="wordmark__sub">Design</span></span>
+      <span class="wordmark"><span class="wordmark__name">Topophilia</span> <span class="wordmark__sub">Design</span></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Menu</span>${icon.menu}</button>
     <nav class="nav" id="primary-nav" aria-label="Primary"><div class="nav__group nav__group--left">${left}</div><div class="nav__group nav__group--right">${right}</div></nav>
