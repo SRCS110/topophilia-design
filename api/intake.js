@@ -1,6 +1,6 @@
 // Client intake: validates the form and emails it to the studio via Resend.
 // Env (Vercel project settings): RESEND_API_KEY, INTAKE_TO (client inbox),
-// INTAKE_FROM (verified Resend sender, e.g. "Topophilia Design <intake@topophiliadesign.com>").
+// INTAKE_FROM (verified Resend sender, e.g. "Topophilia Design Studio <intake@topophiliadesign.com>").
 const MAX = { short: 200, long: 5000 };
 const SERVICES = { collector: "The Collector (sourcing)", tailor: "The Tailor (making pieces work with what you have)", builder: "The Builder (a cohesive plan)" };
 const hits = new Map(); // best-effort per-instance rate limit

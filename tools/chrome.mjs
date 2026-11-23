@@ -22,7 +22,7 @@ function header(path) {
   <div class="site-header__bar">
     <a class="brand" href="/">
       <img src="/assets/img/tailor-icon-120.webp" srcset="/assets/img/tailor-icon-120.webp 1x, /assets/img/tailor-icon-240.webp 2x" alt="" width="61" height="58">
-      <span class="wordmark"><span class="wordmark__name">Topophilia</span> <span class="wordmark__sub">Design</span></span>
+      <span class="wordmark"><span class="wordmark__name">Topophilia</span> <span class="wordmark__sub">Design Studio</span></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Menu</span>${icon.menu}</button>
     <nav class="nav" id="primary-nav" aria-label="Primary"><div class="nav__group nav__group--left">${left}</div><div class="nav__group nav__group--right">${right}</div></nav>
@@ -38,8 +38,8 @@ function footer() {
   return `<footer class="site-footer">
   <div class="footer__grid">
     <div class="footer__brand">
-      <a class="footer__mark" href="/about"><img src="/assets/img/mark-120.webp" alt="" width="83" height="120" loading="lazy" decoding="async"><span>The story of our horse</span></a>
-      <span class="wordmark"><span class="wordmark__name">Topophilia</span><span class="wordmark__sub">Design</span></span>
+      <a class="footer__mark" href="/about" aria-label="The story of our horse"><img src="/assets/img/mark-white-120.webp" srcset="/assets/img/mark-white-120.webp 1x, /assets/img/mark-white-240.webp 2x" alt="" width="58" height="84" loading="lazy" decoding="async"></a>
+      <span class="wordmark"><span class="wordmark__name">Topophilia</span><span class="wordmark__sub">Design Studio</span></span>
       <p>${esc(site.serviceArea)}</p>
     </div>
     ${cols}

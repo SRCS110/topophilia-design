@@ -1,7 +1,7 @@
 // Single source of truth for the site chrome (nav, footer, legal links).
 // Edit here, then run `node tools/chrome.mjs` to stamp every page.
 export const site = {
-  name: "Topophilia Design",
+  name: "Topophilia Design Studio",
   domain: "https://www.topophiliadesign.com",
   serviceArea: "Interior and wardrobe design in Sonoma County and the greater Bay Area.",
   navLeft: [
