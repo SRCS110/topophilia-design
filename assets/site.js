@@ -44,64 +44,6 @@
   }
 
 
-  /* Relay: one baton passed down the stacked figures.
-     The holder keeps it at least HOLD_MS and lets go once it rises past the upper third of the screen. */
-  const relay = document.querySelector(".relay");
-  const baton = relay && relay.querySelector(".baton");
-  if (relay && baton) {
-    const stages = [...relay.querySelectorAll(".relay__stage")];
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const HOLD_MS = 1200;
-    let holder = 0, caughtAt = performance.now(), flying = false, timer = null;
-    const headerH = () => (document.querySelector(".site-header")?.offsetHeight || 0);
-    const ballY = (i) => { const r = stages[i].getBoundingClientRect(); return r.top + parseFloat(getComputedStyle(stages[i]).getPropertyValue("--ball-y")); };
-
-    const pass = (to) => {
-      const from = holder;
-      if (to < 0 || to >= stages.length || flying) return;
-      const a = stages[from].getBoundingClientRect(), b = stages[to].getBoundingClientRect();
-      const dx = (b.left + b.width / 2) - (a.left + a.width / 2);
-      const dy = ballY(to) - ballY(from);
-      const land = () => {
-        baton.getAnimations().forEach((an) => an.cancel());
-        baton.removeAttribute("data-flying");
-        stages[to].insertBefore(baton, stages[to].firstChild);
-        stages[to].removeAttribute("data-catch"); void stages[to].offsetWidth; stages[to].setAttribute("data-catch", "true");
-        holder = to; caughtAt = performance.now(); flying = false;
-        check();
-      };
-      if (reduce.matches || !baton.animate) { land(); return; }
-      flying = true; baton.setAttribute("data-flying", "true");
-      const down = dy > 0, dist = Math.hypot(dx, dy);
-      const dur = Math.min(1100, Math.max(700, Math.sqrt(dist) * 30));
-      const tilt = down ? 10 : -10;
-      const anim = baton.animate(
-        [ { transform: "translate(0,0) rotate(0deg)" },
-          { transform: `translate(${dx * 0.5}px,${dy * 0.5 - (down ? 0 : 30)}px) rotate(${tilt}deg)`, offset: 0.5 },
-          { transform: `translate(${dx}px,${dy}px) rotate(0deg)` } ],
-        { duration: dur, easing: down ? "cubic-bezier(.5,0,.35,1)" : "cubic-bezier(.3,0,.25,1)", fill: "forwards" }
-      );
-      anim.onfinish = land;
-    };
-
-    function check() {
-      if (flying) return;
-      clearTimeout(timer);
-      const top = headerH() + (window.innerHeight - headerH()) * 0.3, bottom = window.innerHeight * 0.85;
-      const y = ballY(holder);
-      let to = null;
-      if (y < top && holder < stages.length - 1) to = holder + 1;        // rising past 30% of the view: drop down
-      else if (y > bottom && holder > 0) to = holder - 1;                 // sinking toward the bottom: toss back up
-      if (to === null) return;
-      const wait = HOLD_MS - (performance.now() - caughtAt);
-      if (wait > 0) { timer = setTimeout(check, wait); return; }
-      pass(to);
-    }
-    let ticking = false;
-    window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; check(); }); } }, { passive: true });
-    window.addEventListener("resize", check);
-  }
-
   /* Cookie consent (versioned, GPC aware). Analytics loads only after opt-in. */
   const CONSENT_KEY = "tpd-consent";
   const CONSENT_VERSION = 1;
