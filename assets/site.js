@@ -47,19 +47,21 @@
   /* Cookie consent (versioned, GPC aware). Analytics loads only after opt-in. */
   const CONSENT_KEY = "tpd-consent";
   const CONSENT_VERSION = 1;
-  const GA_ID = ""; // Set the GA4 measurement ID (G-XXXX) when the client supplies it.
+  const GTM_ID = "GTM-5SMKMWKN"; // Google Tag Manager container; loads only after analytics consent.
   const gpc = navigator.globalPrivacyControl === true;
   const read = () => { try { const v = JSON.parse(localStorage.getItem(CONSENT_KEY)); return v && v.version === CONSENT_VERSION ? v : null; } catch { return null; } };
   const save = (analytics) => { const v = { version: CONSENT_VERSION, analytics: !!analytics && !gpc, ts: new Date().toISOString() }; try { localStorage.setItem(CONSENT_KEY, JSON.stringify(v)); } catch {} return v; };
   const loadAnalytics = () => {
-    if (!GA_ID || window.__gaLoaded) return;
-    window.__gaLoaded = true;
-    const s = document.createElement("script");
-    s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
-    document.head.appendChild(s);
+    if (!GTM_ID || window.__gtmLoaded) return;
+    window.__gtmLoaded = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
-    window.gtag("js", new Date()); window.gtag("config", GA_ID, { anonymize_ip: true });
+    window.gtag("consent", "default", { analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
+    window.gtag("js", new Date());
+    window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
+    const s = document.createElement("script");
+    s.async = true; s.src = "https://www.googletagmanager.com/gtm.js?id=" + encodeURIComponent(GTM_ID);
+    document.head.appendChild(s);
   };
   const banner = document.getElementById("consent");
   let lastFocus = null;
@@ -94,7 +96,7 @@
     const cur = read();
     if (cur) { if (cur.analytics && !gpc) loadAnalytics(); }
     else if (gpc) { save(false); }
-    else if (GA_ID) { showBanner(); }
+    else if (GTM_ID) { showBanner(); }
   }
 
   /* Client intake form */

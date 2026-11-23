@@ -364,3 +364,4 @@ body:not(.has-hero) { padding-top: var(--header-h); }
 /* Secondary page heroes match the home hero */
 .page-hero { min-height: 100svh; max-height: 1000px; }
 .page-hero__copy { padding-bottom: clamp(3rem, 7vw, 6.5rem); }
+.consent h2:focus { outline: none; }
