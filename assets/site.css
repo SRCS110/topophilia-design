@@ -418,3 +418,9 @@ body:not(.has-hero) { padding-top: var(--header-h); }
   body[data-nav-open="true"] .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--page); z-index: 80; }
   .nav { z-index: 81; height: calc(100dvh - var(--header-h)); }
 }
+
+/* Mobile: header slides away on scroll down, returns on scroll up (site.js) */
+@media (max-width: 1080px) {
+  .site-header { transition: background .35s ease, border-color .35s ease, backdrop-filter .35s ease, transform .35s var(--ease); }
+  .site-header.nav-hidden { transform: translateY(-100%); }
+}

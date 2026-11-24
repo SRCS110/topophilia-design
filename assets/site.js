@@ -9,6 +9,24 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  /* Mobile: header slides away on scroll down, returns on scroll up */
+  if (header && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const mq = matchMedia("(max-width: 1080px)");
+    let last = window.scrollY, ticking = false;
+    const show = () => header.classList.remove("nav-hidden");
+    const update = () => {
+      ticking = false;
+      const y = Math.max(0, window.scrollY), d = y - last;
+      const open = document.body.getAttribute("data-nav-open") === "true";
+      if (!mq.matches || open || header.contains(document.activeElement) || y <= header.offsetHeight) { show(); last = y; return; }
+      if (d > 6) { header.classList.add("nav-hidden"); last = y; }
+      else if (d < -6) { show(); last = y; }
+    };
+    window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    header.addEventListener("focusin", show);
+    if (mq.addEventListener) mq.addEventListener("change", show);
+  }
+
   /* Mobile nav: aria-expanded, Escape, scroll lock, focus trap */
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.getElementById("primary-nav");
